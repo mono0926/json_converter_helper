@@ -15,6 +15,8 @@ class Entity with _$Entity {
     DateTime? dateTimeNullable,
     @Default(UnionTimestamp.serverTimestamp()) UnionTimestamp unionTimestamp,
     UnionTimestamp? unionTimestampNullable,
+    @UnionTimestampConverter.alwaysServerTimestampConverter
+        required UnionTimestamp alwaysServerTimestamp,
     required DocumentReference<JsonMap> documentReference,
     required Color color,
   }) = _Entity;

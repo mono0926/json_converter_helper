@@ -17,6 +17,7 @@ void main() {
       dateTimeNullable: date,
       unionTimestamp: UnionTimestamp.dateTime(date),
       unionTimestampNullable: UnionTimestamp.dateTime(date),
+      alwaysServerTimestamp: UnionTimestamp.dateTime(date),
       documentReference: userDocRef,
       color: color,
     );
@@ -44,6 +45,10 @@ void main() {
     test('unionTimestampNullable', () {
       expect(entity.unionTimestamp.date, date);
       expect(json['unionTimestampNullable'], Timestamp.fromDate(date));
+    });
+    test('alwaysServerTimestamp', () {
+      expect(entity.alwaysServerTimestamp.date, date);
+      expect(json['alwaysServerTimestamp'], isA<FieldValue>());
     });
     test('documentReference', () {
       expect(json['documentReference'], userDocRef);

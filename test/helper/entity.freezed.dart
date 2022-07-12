@@ -25,6 +25,9 @@ mixin _$Entity {
   UnionTimestamp get unionTimestamp => throw _privateConstructorUsedError;
   UnionTimestamp? get unionTimestampNullable =>
       throw _privateConstructorUsedError;
+  @UnionTimestampConverter.alwaysServerTimestampConverter
+  UnionTimestamp get alwaysServerTimestamp =>
+      throw _privateConstructorUsedError;
   DocumentReference<JsonMap> get documentReference =>
       throw _privateConstructorUsedError;
   Color get color => throw _privateConstructorUsedError;
@@ -43,11 +46,14 @@ abstract class $EntityCopyWith<$Res> {
       DateTime? dateTimeNullable,
       UnionTimestamp unionTimestamp,
       UnionTimestamp? unionTimestampNullable,
+      @UnionTimestampConverter.alwaysServerTimestampConverter
+          UnionTimestamp alwaysServerTimestamp,
       DocumentReference<JsonMap> documentReference,
       Color color});
 
   $UnionTimestampCopyWith<$Res> get unionTimestamp;
   $UnionTimestampCopyWith<$Res>? get unionTimestampNullable;
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp;
 }
 
 /// @nodoc
@@ -64,6 +70,7 @@ class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
     Object? dateTimeNullable = freezed,
     Object? unionTimestamp = freezed,
     Object? unionTimestampNullable = freezed,
+    Object? alwaysServerTimestamp = freezed,
     Object? documentReference = freezed,
     Object? color = freezed,
   }) {
@@ -84,6 +91,10 @@ class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
           ? _value.unionTimestampNullable
           : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp?,
+      alwaysServerTimestamp: alwaysServerTimestamp == freezed
+          ? _value.alwaysServerTimestamp
+          : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
+              as UnionTimestamp,
       documentReference: documentReference == freezed
           ? _value.documentReference
           : documentReference // ignore: cast_nullable_to_non_nullable
@@ -113,6 +124,13 @@ class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
       return _then(_value.copyWith(unionTimestampNullable: value));
     });
   }
+
+  @override
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp {
+    return $UnionTimestampCopyWith<$Res>(_value.alwaysServerTimestamp, (value) {
+      return _then(_value.copyWith(alwaysServerTimestamp: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -125,6 +143,8 @@ abstract class _$$_EntityCopyWith<$Res> implements $EntityCopyWith<$Res> {
       DateTime? dateTimeNullable,
       UnionTimestamp unionTimestamp,
       UnionTimestamp? unionTimestampNullable,
+      @UnionTimestampConverter.alwaysServerTimestampConverter
+          UnionTimestamp alwaysServerTimestamp,
       DocumentReference<JsonMap> documentReference,
       Color color});
 
@@ -132,6 +152,8 @@ abstract class _$$_EntityCopyWith<$Res> implements $EntityCopyWith<$Res> {
   $UnionTimestampCopyWith<$Res> get unionTimestamp;
   @override
   $UnionTimestampCopyWith<$Res>? get unionTimestampNullable;
+  @override
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp;
 }
 
 /// @nodoc
@@ -149,6 +171,7 @@ class __$$_EntityCopyWithImpl<$Res> extends _$EntityCopyWithImpl<$Res>
     Object? dateTimeNullable = freezed,
     Object? unionTimestamp = freezed,
     Object? unionTimestampNullable = freezed,
+    Object? alwaysServerTimestamp = freezed,
     Object? documentReference = freezed,
     Object? color = freezed,
   }) {
@@ -169,6 +192,10 @@ class __$$_EntityCopyWithImpl<$Res> extends _$EntityCopyWithImpl<$Res>
           ? _value.unionTimestampNullable
           : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp?,
+      alwaysServerTimestamp: alwaysServerTimestamp == freezed
+          ? _value.alwaysServerTimestamp
+          : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
+              as UnionTimestamp,
       documentReference: documentReference == freezed
           ? _value.documentReference
           : documentReference // ignore: cast_nullable_to_non_nullable
@@ -190,6 +217,8 @@ class _$_Entity extends _Entity {
       this.dateTimeNullable,
       this.unionTimestamp = const UnionTimestamp.serverTimestamp(),
       this.unionTimestampNullable,
+      @UnionTimestampConverter.alwaysServerTimestampConverter
+          required this.alwaysServerTimestamp,
       required this.documentReference,
       required this.color})
       : super._();
@@ -207,13 +236,16 @@ class _$_Entity extends _Entity {
   @override
   final UnionTimestamp? unionTimestampNullable;
   @override
+  @UnionTimestampConverter.alwaysServerTimestampConverter
+  final UnionTimestamp alwaysServerTimestamp;
+  @override
   final DocumentReference<JsonMap> documentReference;
   @override
   final Color color;
 
   @override
   String toString() {
-    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, documentReference: $documentReference, color: $color)';
+    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
   }
 
   @override
@@ -229,6 +261,8 @@ class _$_Entity extends _Entity {
             const DeepCollectionEquality()
                 .equals(other.unionTimestampNullable, unionTimestampNullable) &&
             const DeepCollectionEquality()
+                .equals(other.alwaysServerTimestamp, alwaysServerTimestamp) &&
+            const DeepCollectionEquality()
                 .equals(other.documentReference, documentReference) &&
             const DeepCollectionEquality().equals(other.color, color));
   }
@@ -241,6 +275,7 @@ class _$_Entity extends _Entity {
       const DeepCollectionEquality().hash(dateTimeNullable),
       const DeepCollectionEquality().hash(unionTimestamp),
       const DeepCollectionEquality().hash(unionTimestampNullable),
+      const DeepCollectionEquality().hash(alwaysServerTimestamp),
       const DeepCollectionEquality().hash(documentReference),
       const DeepCollectionEquality().hash(color));
 
@@ -261,6 +296,8 @@ abstract class _Entity extends Entity {
       final DateTime? dateTimeNullable,
       final UnionTimestamp unionTimestamp,
       final UnionTimestamp? unionTimestampNullable,
+      @UnionTimestampConverter.alwaysServerTimestampConverter
+          required final UnionTimestamp alwaysServerTimestamp,
       required final DocumentReference<JsonMap> documentReference,
       required final Color color}) = _$_Entity;
   const _Entity._() : super._();
@@ -275,6 +312,9 @@ abstract class _Entity extends Entity {
   UnionTimestamp get unionTimestamp;
   @override
   UnionTimestamp? get unionTimestampNullable;
+  @override
+  @UnionTimestampConverter.alwaysServerTimestampConverter
+  UnionTimestamp get alwaysServerTimestamp;
   @override
   DocumentReference<JsonMap> get documentReference;
   @override

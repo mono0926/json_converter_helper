@@ -20,6 +20,9 @@ _$_Entity _$$_EntityFromJson(Map json) => _$_Entity(
       unionTimestampNullable: _$JsonConverterFromJson<Object, UnionTimestamp>(
           json['unionTimestampNullable'],
           const UnionTimestampConverter().fromJson),
+      alwaysServerTimestamp: UnionTimestampConverter
+          .alwaysServerTimestampConverter
+          .fromJson(json['alwaysServerTimestamp'] as Object),
       documentReference: const DocumentReferenceConverter().fromJson(
           json['documentReference'] as DocumentReference<Map<String, dynamic>>),
       color: const ColorConverter().fromJson(json['color'] as int),
@@ -34,6 +37,9 @@ Map<String, dynamic> _$$_EntityToJson(_$_Entity instance) => <String, dynamic>{
       'unionTimestampNullable': _$JsonConverterToJson<Object, UnionTimestamp>(
           instance.unionTimestampNullable,
           const UnionTimestampConverter().toJson),
+      'alwaysServerTimestamp': UnionTimestampConverter
+          .alwaysServerTimestampConverter
+          .toJson(instance.alwaysServerTimestamp),
       'documentReference':
           const DocumentReferenceConverter().toJson(instance.documentReference),
       'color': const ColorConverter().toJson(instance.color),

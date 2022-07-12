@@ -6,7 +6,12 @@ part 'union_timestamp.freezed.dart';
 const unionTimestampConverter = UnionTimestampConverter();
 
 class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
-  const UnionTimestampConverter();
+  const UnionTimestampConverter({this.alwaysServerTimestampJson = false});
+
+  final bool alwaysServerTimestampJson;
+
+  static const alwaysServerTimestampConverter =
+      UnionTimestampConverter(alwaysServerTimestampJson: true);
 
   @override
   UnionTimestamp fromJson(Object json) {
@@ -15,10 +20,12 @@ class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
   }
 
   @override
-  Object toJson(UnionTimestamp object) => object.map(
-        dateTime: (date) => Timestamp.fromDate(date.date),
-        serverTimestamp: (_) => FieldValue.serverTimestamp(),
-      );
+  Object toJson(UnionTimestamp object) => alwaysServerTimestampJson
+      ? FieldValue.serverTimestamp()
+      : object.map(
+          dateTime: (date) => Timestamp.fromDate(date.date),
+          serverTimestamp: (_) => FieldValue.serverTimestamp(),
+        );
 }
 
 @freezed
