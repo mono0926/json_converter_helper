@@ -10,8 +10,9 @@ class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
 
   final bool alwaysServerTimestampJson;
 
-  static const alwaysServerTimestampConverter =
-      UnionTimestampConverter(alwaysServerTimestampJson: true);
+  static const alwaysServerTimestampConverter = UnionTimestampConverter(
+    alwaysServerTimestampJson: true,
+  );
 
   @override
   UnionTimestamp fromJson(Object json) {
