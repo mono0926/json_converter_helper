@@ -4,7 +4,7 @@ version: 0.1.2
 repository: https://github.com/mono0926/json_converter_helper
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: ^3.0.0
 
 dependencies:
   cloud_firestore: ^4.0.0
