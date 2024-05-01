@@ -16,6 +16,7 @@ const allJsonConverters = <JsonConverter<dynamic, dynamic>>[
 
 const allJsonConvertersSerializable = JsonSerializable(
   converters: allJsonConverters,
+  createJsonKeys: true,
 );
 
 class PassthroughConverter<T> implements JsonConverter<T, T> {

@@ -28,6 +28,16 @@ _$EntityImpl _$$EntityImplFromJson(Map json) => _$EntityImpl(
       color: const ColorConverter().fromJson((json['color'] as num).toInt()),
     );
 
+abstract final class _$$EntityImplJsonKeys {
+  static const String dateTime = 'dateTime';
+  static const String dateTimeNullable = 'dateTimeNullable';
+  static const String unionTimestamp = 'unionTimestamp';
+  static const String unionTimestampNullable = 'unionTimestampNullable';
+  static const String alwaysServerTimestamp = 'alwaysServerTimestamp';
+  static const String documentReference = 'documentReference';
+  static const String color = 'color';
+}
+
 Map<String, dynamic> _$$EntityImplToJson(_$EntityImpl instance) =>
     <String, dynamic>{
       'dateTime': const TimestampConverter().toJson(instance.dateTime),

@@ -1,6 +1,6 @@
 name: json_converter_helper
 description: JSON converters for package:json_serializable.
-version: 0.1.2
+version: 0.1.3
 repository: https://github.com/mono0926/json_converter_helper
 
 environment:
