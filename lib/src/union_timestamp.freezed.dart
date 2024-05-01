@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'union_timestamp.dart';
 
@@ -12,7 +12,7 @@ part of 'union_timestamp.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UnionTimestamp {
@@ -24,8 +24,8 @@ mixin _$UnionTimestamp {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
+    TResult? Function(DateTime date)? dateTime,
+    TResult? Function()? serverTimestamp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,8 +43,8 @@ mixin _$UnionTimestamp {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UnionDateTime value)? dateTime,
-    TResult Function(UnionServerTimestamp value)? serverTimestamp,
+    TResult? Function(UnionDateTime value)? dateTime,
+    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,44 +60,44 @@ mixin _$UnionTimestamp {
 abstract class $UnionTimestampCopyWith<$Res> {
   factory $UnionTimestampCopyWith(
           UnionTimestamp value, $Res Function(UnionTimestamp) then) =
-      _$UnionTimestampCopyWithImpl<$Res>;
+      _$UnionTimestampCopyWithImpl<$Res, UnionTimestamp>;
 }
 
 /// @nodoc
-class _$UnionTimestampCopyWithImpl<$Res>
+class _$UnionTimestampCopyWithImpl<$Res, $Val extends UnionTimestamp>
     implements $UnionTimestampCopyWith<$Res> {
   _$UnionTimestampCopyWithImpl(this._value, this._then);
 
-  final UnionTimestamp _value;
   // ignore: unused_field
-  final $Res Function(UnionTimestamp) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$UnionDateTimeCopyWith<$Res> {
-  factory _$$UnionDateTimeCopyWith(
-          _$UnionDateTime value, $Res Function(_$UnionDateTime) then) =
-      __$$UnionDateTimeCopyWithImpl<$Res>;
+abstract class _$$UnionDateTimeImplCopyWith<$Res> {
+  factory _$$UnionDateTimeImplCopyWith(
+          _$UnionDateTimeImpl value, $Res Function(_$UnionDateTimeImpl) then) =
+      __$$UnionDateTimeImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({DateTime date});
 }
 
 /// @nodoc
-class __$$UnionDateTimeCopyWithImpl<$Res>
-    extends _$UnionTimestampCopyWithImpl<$Res>
-    implements _$$UnionDateTimeCopyWith<$Res> {
-  __$$UnionDateTimeCopyWithImpl(
-      _$UnionDateTime _value, $Res Function(_$UnionDateTime) _then)
-      : super(_value, (v) => _then(v as _$UnionDateTime));
+class __$$UnionDateTimeImplCopyWithImpl<$Res>
+    extends _$UnionTimestampCopyWithImpl<$Res, _$UnionDateTimeImpl>
+    implements _$$UnionDateTimeImplCopyWith<$Res> {
+  __$$UnionDateTimeImplCopyWithImpl(
+      _$UnionDateTimeImpl _value, $Res Function(_$UnionDateTimeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$UnionDateTime get _value => super._value as _$UnionDateTime;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = freezed,
+    Object? date = null,
   }) {
-    return _then(_$UnionDateTime(
-      date == freezed
+    return _then(_$UnionDateTimeImpl(
+      null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
@@ -107,8 +107,8 @@ class __$$UnionDateTimeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UnionDateTime extends UnionDateTime {
-  const _$UnionDateTime(this.date) : super._();
+class _$UnionDateTimeImpl extends UnionDateTime {
+  const _$UnionDateTimeImpl(this.date) : super._();
 
   @override
   final DateTime date;
@@ -119,21 +119,21 @@ class _$UnionDateTime extends UnionDateTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UnionDateTime &&
-            const DeepCollectionEquality().equals(other.date, date));
+            other is _$UnionDateTimeImpl &&
+            (identical(other.date, date) || other.date == date));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(date));
+  int get hashCode => Object.hash(runtimeType, date);
 
   @JsonKey(ignore: true)
   @override
-  _$$UnionDateTimeCopyWith<_$UnionDateTime> get copyWith =>
-      __$$UnionDateTimeCopyWithImpl<_$UnionDateTime>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$UnionDateTimeImplCopyWith<_$UnionDateTimeImpl> get copyWith =>
+      __$$UnionDateTimeImplCopyWithImpl<_$UnionDateTimeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -147,8 +147,8 @@ class _$UnionDateTime extends UnionDateTime {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
+    TResult? Function(DateTime date)? dateTime,
+    TResult? Function()? serverTimestamp,
   }) {
     return dateTime?.call(date);
   }
@@ -178,8 +178,8 @@ class _$UnionDateTime extends UnionDateTime {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UnionDateTime value)? dateTime,
-    TResult Function(UnionServerTimestamp value)? serverTimestamp,
+    TResult? Function(UnionDateTime value)? dateTime,
+    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
   }) {
     return dateTime?.call(this);
   }
@@ -199,38 +199,35 @@ class _$UnionDateTime extends UnionDateTime {
 }
 
 abstract class UnionDateTime extends UnionTimestamp {
-  const factory UnionDateTime(final DateTime date) = _$UnionDateTime;
+  const factory UnionDateTime(final DateTime date) = _$UnionDateTimeImpl;
   const UnionDateTime._() : super._();
 
   DateTime get date;
   @JsonKey(ignore: true)
-  _$$UnionDateTimeCopyWith<_$UnionDateTime> get copyWith =>
+  _$$UnionDateTimeImplCopyWith<_$UnionDateTimeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UnionServerTimestampCopyWith<$Res> {
-  factory _$$UnionServerTimestampCopyWith(_$UnionServerTimestamp value,
-          $Res Function(_$UnionServerTimestamp) then) =
-      __$$UnionServerTimestampCopyWithImpl<$Res>;
+abstract class _$$UnionServerTimestampImplCopyWith<$Res> {
+  factory _$$UnionServerTimestampImplCopyWith(_$UnionServerTimestampImpl value,
+          $Res Function(_$UnionServerTimestampImpl) then) =
+      __$$UnionServerTimestampImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UnionServerTimestampCopyWithImpl<$Res>
-    extends _$UnionTimestampCopyWithImpl<$Res>
-    implements _$$UnionServerTimestampCopyWith<$Res> {
-  __$$UnionServerTimestampCopyWithImpl(_$UnionServerTimestamp _value,
-      $Res Function(_$UnionServerTimestamp) _then)
-      : super(_value, (v) => _then(v as _$UnionServerTimestamp));
-
-  @override
-  _$UnionServerTimestamp get _value => super._value as _$UnionServerTimestamp;
+class __$$UnionServerTimestampImplCopyWithImpl<$Res>
+    extends _$UnionTimestampCopyWithImpl<$Res, _$UnionServerTimestampImpl>
+    implements _$$UnionServerTimestampImplCopyWith<$Res> {
+  __$$UnionServerTimestampImplCopyWithImpl(_$UnionServerTimestampImpl _value,
+      $Res Function(_$UnionServerTimestampImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UnionServerTimestamp extends UnionServerTimestamp {
-  const _$UnionServerTimestamp() : super._();
+class _$UnionServerTimestampImpl extends UnionServerTimestamp {
+  const _$UnionServerTimestampImpl() : super._();
 
   @override
   String toString() {
@@ -238,9 +235,10 @@ class _$UnionServerTimestamp extends UnionServerTimestamp {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UnionServerTimestamp);
+        (other.runtimeType == runtimeType &&
+            other is _$UnionServerTimestampImpl);
   }
 
   @override
@@ -258,8 +256,8 @@ class _$UnionServerTimestamp extends UnionServerTimestamp {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
+    TResult? Function(DateTime date)? dateTime,
+    TResult? Function()? serverTimestamp,
   }) {
     return serverTimestamp?.call();
   }
@@ -289,8 +287,8 @@ class _$UnionServerTimestamp extends UnionServerTimestamp {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UnionDateTime value)? dateTime,
-    TResult Function(UnionServerTimestamp value)? serverTimestamp,
+    TResult? Function(UnionDateTime value)? dateTime,
+    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
   }) {
     return serverTimestamp?.call(this);
   }
@@ -310,6 +308,6 @@ class _$UnionServerTimestamp extends UnionServerTimestamp {
 }
 
 abstract class UnionServerTimestamp extends UnionTimestamp {
-  const factory UnionServerTimestamp() = _$UnionServerTimestamp;
+  const factory UnionServerTimestamp() = _$UnionServerTimestampImpl;
   const UnionServerTimestamp._() : super._();
 }

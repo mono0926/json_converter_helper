@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'entity.dart';
 
@@ -12,7 +12,7 @@ part of 'entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Entity _$EntityFromJson(Map<String, dynamic> json) {
   return _Entity.fromJson(json);
@@ -40,14 +40,15 @@ mixin _$Entity {
 /// @nodoc
 abstract class $EntityCopyWith<$Res> {
   factory $EntityCopyWith(Entity value, $Res Function(Entity) then) =
-      _$EntityCopyWithImpl<$Res>;
+      _$EntityCopyWithImpl<$Res, Entity>;
+  @useResult
   $Res call(
       {DateTime dateTime,
       DateTime? dateTimeNullable,
       UnionTimestamp unionTimestamp,
       UnionTimestamp? unionTimestampNullable,
       @UnionTimestampConverter.alwaysServerTimestampConverter
-          UnionTimestamp alwaysServerTimestamp,
+      UnionTimestamp alwaysServerTimestamp,
       DocumentReference<JsonMap> documentReference,
       Color color});
 
@@ -57,63 +58,68 @@ abstract class $EntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
+class _$EntityCopyWithImpl<$Res, $Val extends Entity>
+    implements $EntityCopyWith<$Res> {
   _$EntityCopyWithImpl(this._value, this._then);
 
-  final Entity _value;
   // ignore: unused_field
-  final $Res Function(Entity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
     Object? dateTimeNullable = freezed,
-    Object? unionTimestamp = freezed,
+    Object? unionTimestamp = null,
     Object? unionTimestampNullable = freezed,
-    Object? alwaysServerTimestamp = freezed,
-    Object? documentReference = freezed,
-    Object? color = freezed,
+    Object? alwaysServerTimestamp = null,
+    Object? documentReference = null,
+    Object? color = null,
   }) {
     return _then(_value.copyWith(
-      dateTime: dateTime == freezed
+      dateTime: null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      dateTimeNullable: dateTimeNullable == freezed
+      dateTimeNullable: freezed == dateTimeNullable
           ? _value.dateTimeNullable
           : dateTimeNullable // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      unionTimestamp: unionTimestamp == freezed
+      unionTimestamp: null == unionTimestamp
           ? _value.unionTimestamp
           : unionTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
-      unionTimestampNullable: unionTimestampNullable == freezed
+      unionTimestampNullable: freezed == unionTimestampNullable
           ? _value.unionTimestampNullable
           : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp?,
-      alwaysServerTimestamp: alwaysServerTimestamp == freezed
+      alwaysServerTimestamp: null == alwaysServerTimestamp
           ? _value.alwaysServerTimestamp
           : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
-      documentReference: documentReference == freezed
+      documentReference: null == documentReference
           ? _value.documentReference
           : documentReference // ignore: cast_nullable_to_non_nullable
               as DocumentReference<JsonMap>,
-      color: color == freezed
+      color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UnionTimestampCopyWith<$Res> get unionTimestamp {
     return $UnionTimestampCopyWith<$Res>(_value.unionTimestamp, (value) {
-      return _then(_value.copyWith(unionTimestamp: value));
+      return _then(_value.copyWith(unionTimestamp: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UnionTimestampCopyWith<$Res>? get unionTimestampNullable {
     if (_value.unionTimestampNullable == null) {
       return null;
@@ -121,30 +127,33 @@ class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
 
     return $UnionTimestampCopyWith<$Res>(_value.unionTimestampNullable!,
         (value) {
-      return _then(_value.copyWith(unionTimestampNullable: value));
+      return _then(_value.copyWith(unionTimestampNullable: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp {
     return $UnionTimestampCopyWith<$Res>(_value.alwaysServerTimestamp, (value) {
-      return _then(_value.copyWith(alwaysServerTimestamp: value));
+      return _then(_value.copyWith(alwaysServerTimestamp: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_EntityCopyWith<$Res> implements $EntityCopyWith<$Res> {
-  factory _$$_EntityCopyWith(_$_Entity value, $Res Function(_$_Entity) then) =
-      __$$_EntityCopyWithImpl<$Res>;
+abstract class _$$EntityImplCopyWith<$Res> implements $EntityCopyWith<$Res> {
+  factory _$$EntityImplCopyWith(
+          _$EntityImpl value, $Res Function(_$EntityImpl) then) =
+      __$$EntityImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {DateTime dateTime,
       DateTime? dateTimeNullable,
       UnionTimestamp unionTimestamp,
       UnionTimestamp? unionTimestampNullable,
       @UnionTimestampConverter.alwaysServerTimestampConverter
-          UnionTimestamp alwaysServerTimestamp,
+      UnionTimestamp alwaysServerTimestamp,
       DocumentReference<JsonMap> documentReference,
       Color color});
 
@@ -157,50 +166,50 @@ abstract class _$$_EntityCopyWith<$Res> implements $EntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EntityCopyWithImpl<$Res> extends _$EntityCopyWithImpl<$Res>
-    implements _$$_EntityCopyWith<$Res> {
-  __$$_EntityCopyWithImpl(_$_Entity _value, $Res Function(_$_Entity) _then)
-      : super(_value, (v) => _then(v as _$_Entity));
+class __$$EntityImplCopyWithImpl<$Res>
+    extends _$EntityCopyWithImpl<$Res, _$EntityImpl>
+    implements _$$EntityImplCopyWith<$Res> {
+  __$$EntityImplCopyWithImpl(
+      _$EntityImpl _value, $Res Function(_$EntityImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_Entity get _value => super._value as _$_Entity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
     Object? dateTimeNullable = freezed,
-    Object? unionTimestamp = freezed,
+    Object? unionTimestamp = null,
     Object? unionTimestampNullable = freezed,
-    Object? alwaysServerTimestamp = freezed,
-    Object? documentReference = freezed,
-    Object? color = freezed,
+    Object? alwaysServerTimestamp = null,
+    Object? documentReference = null,
+    Object? color = null,
   }) {
-    return _then(_$_Entity(
-      dateTime: dateTime == freezed
+    return _then(_$EntityImpl(
+      dateTime: null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      dateTimeNullable: dateTimeNullable == freezed
+      dateTimeNullable: freezed == dateTimeNullable
           ? _value.dateTimeNullable
           : dateTimeNullable // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      unionTimestamp: unionTimestamp == freezed
+      unionTimestamp: null == unionTimestamp
           ? _value.unionTimestamp
           : unionTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
-      unionTimestampNullable: unionTimestampNullable == freezed
+      unionTimestampNullable: freezed == unionTimestampNullable
           ? _value.unionTimestampNullable
           : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp?,
-      alwaysServerTimestamp: alwaysServerTimestamp == freezed
+      alwaysServerTimestamp: null == alwaysServerTimestamp
           ? _value.alwaysServerTimestamp
           : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
-      documentReference: documentReference == freezed
+      documentReference: null == documentReference
           ? _value.documentReference
           : documentReference // ignore: cast_nullable_to_non_nullable
               as DocumentReference<JsonMap>,
-      color: color == freezed
+      color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color,
@@ -211,20 +220,20 @@ class __$$_EntityCopyWithImpl<$Res> extends _$EntityCopyWithImpl<$Res>
 /// @nodoc
 
 @allJsonConvertersSerializable
-class _$_Entity extends _Entity {
-  const _$_Entity(
+class _$EntityImpl extends _Entity {
+  const _$EntityImpl(
       {required this.dateTime,
       this.dateTimeNullable,
       this.unionTimestamp = const UnionTimestamp.serverTimestamp(),
       this.unionTimestampNullable,
       @UnionTimestampConverter.alwaysServerTimestampConverter
-          required this.alwaysServerTimestamp,
+      required this.alwaysServerTimestamp,
       required this.documentReference,
       required this.color})
       : super._();
 
-  factory _$_Entity.fromJson(Map<String, dynamic> json) =>
-      _$$_EntityFromJson(json);
+  factory _$EntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EntityImplFromJson(json);
 
   @override
   final DateTime dateTime;
@@ -249,44 +258,48 @@ class _$_Entity extends _Entity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Entity &&
-            const DeepCollectionEquality().equals(other.dateTime, dateTime) &&
-            const DeepCollectionEquality()
-                .equals(other.dateTimeNullable, dateTimeNullable) &&
-            const DeepCollectionEquality()
-                .equals(other.unionTimestamp, unionTimestamp) &&
-            const DeepCollectionEquality()
-                .equals(other.unionTimestampNullable, unionTimestampNullable) &&
-            const DeepCollectionEquality()
-                .equals(other.alwaysServerTimestamp, alwaysServerTimestamp) &&
-            const DeepCollectionEquality()
-                .equals(other.documentReference, documentReference) &&
-            const DeepCollectionEquality().equals(other.color, color));
+            other is _$EntityImpl &&
+            (identical(other.dateTime, dateTime) ||
+                other.dateTime == dateTime) &&
+            (identical(other.dateTimeNullable, dateTimeNullable) ||
+                other.dateTimeNullable == dateTimeNullable) &&
+            (identical(other.unionTimestamp, unionTimestamp) ||
+                other.unionTimestamp == unionTimestamp) &&
+            (identical(other.unionTimestampNullable, unionTimestampNullable) ||
+                other.unionTimestampNullable == unionTimestampNullable) &&
+            (identical(other.alwaysServerTimestamp, alwaysServerTimestamp) ||
+                other.alwaysServerTimestamp == alwaysServerTimestamp) &&
+            (identical(other.documentReference, documentReference) ||
+                other.documentReference == documentReference) &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(dateTime),
-      const DeepCollectionEquality().hash(dateTimeNullable),
-      const DeepCollectionEquality().hash(unionTimestamp),
-      const DeepCollectionEquality().hash(unionTimestampNullable),
-      const DeepCollectionEquality().hash(alwaysServerTimestamp),
-      const DeepCollectionEquality().hash(documentReference),
-      const DeepCollectionEquality().hash(color));
+      dateTime,
+      dateTimeNullable,
+      unionTimestamp,
+      unionTimestampNullable,
+      alwaysServerTimestamp,
+      documentReference,
+      color);
 
   @JsonKey(ignore: true)
   @override
-  _$$_EntityCopyWith<_$_Entity> get copyWith =>
-      __$$_EntityCopyWithImpl<_$_Entity>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
+      __$$EntityImplCopyWithImpl<_$EntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EntityToJson(this);
+    return _$$EntityImplToJson(
+      this,
+    );
   }
 }
 
@@ -297,12 +310,12 @@ abstract class _Entity extends Entity {
       final UnionTimestamp unionTimestamp,
       final UnionTimestamp? unionTimestampNullable,
       @UnionTimestampConverter.alwaysServerTimestampConverter
-          required final UnionTimestamp alwaysServerTimestamp,
+      required final UnionTimestamp alwaysServerTimestamp,
       required final DocumentReference<JsonMap> documentReference,
-      required final Color color}) = _$_Entity;
+      required final Color color}) = _$EntityImpl;
   const _Entity._() : super._();
 
-  factory _Entity.fromJson(Map<String, dynamic> json) = _$_Entity.fromJson;
+  factory _Entity.fromJson(Map<String, dynamic> json) = _$EntityImpl.fromJson;
 
   @override
   DateTime get dateTime;
@@ -321,6 +334,6 @@ abstract class _Entity extends Entity {
   Color get color;
   @override
   @JsonKey(ignore: true)
-  _$$_EntityCopyWith<_$_Entity> get copyWith =>
+  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

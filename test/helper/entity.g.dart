@@ -8,7 +8,7 @@ part of 'entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Entity _$$_EntityFromJson(Map json) => _$_Entity(
+_$EntityImpl _$$EntityImplFromJson(Map json) => _$EntityImpl(
       dateTime:
           const TimestampConverter().fromJson(json['dateTime'] as Timestamp),
       dateTimeNullable: _$JsonConverterFromJson<Timestamp, DateTime>(
@@ -25,10 +25,11 @@ _$_Entity _$$_EntityFromJson(Map json) => _$_Entity(
           .fromJson(json['alwaysServerTimestamp'] as Object),
       documentReference: const DocumentReferenceConverter().fromJson(
           json['documentReference'] as DocumentReference<Map<String, dynamic>>),
-      color: const ColorConverter().fromJson(json['color'] as int),
+      color: const ColorConverter().fromJson((json['color'] as num).toInt()),
     );
 
-Map<String, dynamic> _$$_EntityToJson(_$_Entity instance) => <String, dynamic>{
+Map<String, dynamic> _$$EntityImplToJson(_$EntityImpl instance) =>
+    <String, dynamic>{
       'dateTime': const TimestampConverter().toJson(instance.dateTime),
       'dateTimeNullable': _$JsonConverterToJson<Timestamp, DateTime>(
           instance.dateTimeNullable, const TimestampConverter().toJson),
