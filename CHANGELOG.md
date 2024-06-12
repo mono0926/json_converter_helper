@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Upgrade to cloud_firestore: ^5.0.0
+
 ## 0.1.3
 
 - Set `JsonSerializable(createJsonKeys: true)`
