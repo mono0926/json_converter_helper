@@ -1,6 +1,6 @@
 name: json_converter_helper
 description: JSON converters for package:json_serializable.
-version: 0.1.4
+version: 0.1.4+1
 repository: https://github.com/mono0926/json_converter_helper
 
 environment:
@@ -9,7 +9,7 @@ environment:
 dependencies:
   cloud_firestore: ^5.0.0
   freezed_annotation: ^2.0.3
-  json_annotation: ^4.6.0
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   build_runner:

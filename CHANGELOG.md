@@ -1,3 +1,7 @@
+## 0.1.4+1
+
+- Fix dependency
+
 ## 0.1.4
 
 - Upgrade to cloud_firestore: ^5.0.0
