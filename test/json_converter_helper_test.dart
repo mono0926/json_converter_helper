@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:json_converter_helper/json_converter_helper.dart';
 import 'package:test/test.dart';
+
 import 'helper/helper.dart';
 
 void main() {
@@ -54,6 +55,7 @@ void main() {
       expect(json['documentReference'], userDocRef);
     });
     test('color', () {
+      // ignore: deprecated_member_use
       expect(json['color'], color.value);
     });
   });
