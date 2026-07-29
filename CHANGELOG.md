@@ -1,3 +1,12 @@
+## 0.1.7 - 2026-07-29
+
+### Documentation
+- Add comprehensive dartdoc comments for all public APIs.
+- Expand package description in `pubspec.yaml` to improve pub.dev score.
+
+### Dependencies
+- Upgrade `cloud_firestore` to `^6.0.0`.
+
 ## 0.1.6
 
 - Upgrade to cloud_firestore: ^6.0.0
