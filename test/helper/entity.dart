@@ -8,7 +8,7 @@ part 'entity.freezed.dart';
 part 'entity.g.dart';
 
 @freezed
-class Entity with _$Entity {
+abstract class Entity with _$Entity {
   @allJsonConvertersSerializable
   const factory Entity({
     required DateTime dateTime,

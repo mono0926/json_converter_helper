@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,96 +9,264 @@ part of 'union_timestamp.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UnionTimestamp {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(DateTime date) dateTime,
-    required TResult Function() serverTimestamp,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(DateTime date)? dateTime,
-    TResult? Function()? serverTimestamp,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UnionDateTime value) dateTime,
-    required TResult Function(UnionServerTimestamp value) serverTimestamp,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UnionDateTime value)? dateTime,
-    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is UnionTimestamp);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'UnionTimestamp()';
+  }
+}
+
+/// @nodoc
+class $UnionTimestampCopyWith<$Res> {
+  $UnionTimestampCopyWith(UnionTimestamp _, $Res Function(UnionTimestamp) __);
+}
+
+/// Adds pattern-matching-related methods to [UnionTimestamp].
+extension UnionTimestampPatterns on UnionTimestamp {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnionDateTime value)? dateTime,
     TResult Function(UnionServerTimestamp value)? serverTimestamp,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime() when dateTime != null:
+        return dateTime(_that);
+      case UnionServerTimestamp() when serverTimestamp != null:
+        return serverTimestamp(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnionDateTime value) dateTime,
+    required TResult Function(UnionServerTimestamp value) serverTimestamp,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime():
+        return dateTime(_that);
+      case UnionServerTimestamp():
+        return serverTimestamp(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnionDateTime value)? dateTime,
+    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime() when dateTime != null:
+        return dateTime(_that);
+      case UnionServerTimestamp() when serverTimestamp != null:
+        return serverTimestamp(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(DateTime date)? dateTime,
+    TResult Function()? serverTimestamp,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime() when dateTime != null:
+        return dateTime(_that.date);
+      case UnionServerTimestamp() when serverTimestamp != null:
+        return serverTimestamp();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(DateTime date) dateTime,
+    required TResult Function() serverTimestamp,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime():
+        return dateTime(_that.date);
+      case UnionServerTimestamp():
+        return serverTimestamp();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(DateTime date)? dateTime,
+    TResult? Function()? serverTimestamp,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UnionDateTime() when dateTime != null:
+        return dateTime(_that.date);
+      case UnionServerTimestamp() when serverTimestamp != null:
+        return serverTimestamp();
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $UnionTimestampCopyWith<$Res> {
-  factory $UnionTimestampCopyWith(
-          UnionTimestamp value, $Res Function(UnionTimestamp) then) =
-      _$UnionTimestampCopyWithImpl<$Res, UnionTimestamp>;
+
+class UnionDateTime extends UnionTimestamp {
+  const UnionDateTime(this.date) : super._();
+
+  final DateTime date;
+
+  /// Create a copy of UnionTimestamp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UnionDateTimeCopyWith<UnionDateTime> get copyWith =>
+      _$UnionDateTimeCopyWithImpl<UnionDateTime>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UnionDateTime &&
+            (identical(other.date, date) || other.date == date));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, date);
+
+  @override
+  String toString() {
+    return 'UnionTimestamp.dateTime(date: $date)';
+  }
 }
 
 /// @nodoc
-class _$UnionTimestampCopyWithImpl<$Res, $Val extends UnionTimestamp>
+abstract mixin class $UnionDateTimeCopyWith<$Res>
     implements $UnionTimestampCopyWith<$Res> {
-  _$UnionTimestampCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$UnionDateTimeImplCopyWith<$Res> {
-  factory _$$UnionDateTimeImplCopyWith(
-          _$UnionDateTimeImpl value, $Res Function(_$UnionDateTimeImpl) then) =
-      __$$UnionDateTimeImplCopyWithImpl<$Res>;
+  factory $UnionDateTimeCopyWith(
+          UnionDateTime value, $Res Function(UnionDateTime) _then) =
+      _$UnionDateTimeCopyWithImpl;
   @useResult
   $Res call({DateTime date});
 }
 
 /// @nodoc
-class __$$UnionDateTimeImplCopyWithImpl<$Res>
-    extends _$UnionTimestampCopyWithImpl<$Res, _$UnionDateTimeImpl>
-    implements _$$UnionDateTimeImplCopyWith<$Res> {
-  __$$UnionDateTimeImplCopyWithImpl(
-      _$UnionDateTimeImpl _value, $Res Function(_$UnionDateTimeImpl) _then)
-      : super(_value, _then);
+class _$UnionDateTimeCopyWithImpl<$Res>
+    implements $UnionDateTimeCopyWith<$Res> {
+  _$UnionDateTimeCopyWithImpl(this._self, this._then);
 
+  final UnionDateTime _self;
+  final $Res Function(UnionDateTime) _then;
+
+  /// Create a copy of UnionTimestamp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? date = null,
   }) {
-    return _then(_$UnionDateTimeImpl(
+    return _then(UnionDateTime(
       null == date
-          ? _value.date
+          ? _self.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
@@ -107,207 +275,22 @@ class __$$UnionDateTimeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UnionDateTimeImpl extends UnionDateTime {
-  const _$UnionDateTimeImpl(this.date) : super._();
-
-  @override
-  final DateTime date;
-
-  @override
-  String toString() {
-    return 'UnionTimestamp.dateTime(date: $date)';
-  }
+class UnionServerTimestamp extends UnionTimestamp {
+  const UnionServerTimestamp() : super._();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnionDateTimeImpl &&
-            (identical(other.date, date) || other.date == date));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, date);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnionDateTimeImplCopyWith<_$UnionDateTimeImpl> get copyWith =>
-      __$$UnionDateTimeImplCopyWithImpl<_$UnionDateTimeImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(DateTime date) dateTime,
-    required TResult Function() serverTimestamp,
-  }) {
-    return dateTime(date);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(DateTime date)? dateTime,
-    TResult? Function()? serverTimestamp,
-  }) {
-    return dateTime?.call(date);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
-    required TResult orElse(),
-  }) {
-    if (dateTime != null) {
-      return dateTime(date);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UnionDateTime value) dateTime,
-    required TResult Function(UnionServerTimestamp value) serverTimestamp,
-  }) {
-    return dateTime(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UnionDateTime value)? dateTime,
-    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
-  }) {
-    return dateTime?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UnionDateTime value)? dateTime,
-    TResult Function(UnionServerTimestamp value)? serverTimestamp,
-    required TResult orElse(),
-  }) {
-    if (dateTime != null) {
-      return dateTime(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UnionDateTime extends UnionTimestamp {
-  const factory UnionDateTime(final DateTime date) = _$UnionDateTimeImpl;
-  const UnionDateTime._() : super._();
-
-  DateTime get date;
-  @JsonKey(ignore: true)
-  _$$UnionDateTimeImplCopyWith<_$UnionDateTimeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UnionServerTimestampImplCopyWith<$Res> {
-  factory _$$UnionServerTimestampImplCopyWith(_$UnionServerTimestampImpl value,
-          $Res Function(_$UnionServerTimestampImpl) then) =
-      __$$UnionServerTimestampImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UnionServerTimestampImplCopyWithImpl<$Res>
-    extends _$UnionTimestampCopyWithImpl<$Res, _$UnionServerTimestampImpl>
-    implements _$$UnionServerTimestampImplCopyWith<$Res> {
-  __$$UnionServerTimestampImplCopyWithImpl(_$UnionServerTimestampImpl _value,
-      $Res Function(_$UnionServerTimestampImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UnionServerTimestampImpl extends UnionServerTimestamp {
-  const _$UnionServerTimestampImpl() : super._();
-
-  @override
-  String toString() {
-    return 'UnionTimestamp.serverTimestamp()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnionServerTimestampImpl);
+        (other.runtimeType == runtimeType && other is UnionServerTimestamp);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(DateTime date) dateTime,
-    required TResult Function() serverTimestamp,
-  }) {
-    return serverTimestamp();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(DateTime date)? dateTime,
-    TResult? Function()? serverTimestamp,
-  }) {
-    return serverTimestamp?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(DateTime date)? dateTime,
-    TResult Function()? serverTimestamp,
-    required TResult orElse(),
-  }) {
-    if (serverTimestamp != null) {
-      return serverTimestamp();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UnionDateTime value) dateTime,
-    required TResult Function(UnionServerTimestamp value) serverTimestamp,
-  }) {
-    return serverTimestamp(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UnionDateTime value)? dateTime,
-    TResult? Function(UnionServerTimestamp value)? serverTimestamp,
-  }) {
-    return serverTimestamp?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UnionDateTime value)? dateTime,
-    TResult Function(UnionServerTimestamp value)? serverTimestamp,
-    required TResult orElse(),
-  }) {
-    if (serverTimestamp != null) {
-      return serverTimestamp(this);
-    }
-    return orElse();
+  String toString() {
+    return 'UnionTimestamp.serverTimestamp()';
   }
 }
 
-abstract class UnionServerTimestamp extends UnionTimestamp {
-  const factory UnionServerTimestamp() = _$UnionServerTimestampImpl;
-  const UnionServerTimestamp._() : super._();
-}
+// dart format on

@@ -1,5 +1,5 @@
 name: json_converter_helper
-description: JSON converters for package:json_serializable.
+description: A collection of useful JSON converters for package:json_serializable and Cloud Firestore (Timestamp, DocumentReference, Color, UnionTimestamp).
 version: 0.1.6
 repository: https://github.com/mono0926/json_converter_helper
 

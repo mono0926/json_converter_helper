@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,38 +9,72 @@ part of 'entity.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Entity _$EntityFromJson(Map<String, dynamic> json) {
-  return _Entity.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Entity {
-  DateTime get dateTime => throw _privateConstructorUsedError;
-  DateTime? get dateTimeNullable => throw _privateConstructorUsedError;
-  UnionTimestamp get unionTimestamp => throw _privateConstructorUsedError;
-  UnionTimestamp? get unionTimestampNullable =>
-      throw _privateConstructorUsedError;
+  DateTime get dateTime;
+  DateTime? get dateTimeNullable;
+  UnionTimestamp get unionTimestamp;
+  UnionTimestamp? get unionTimestampNullable;
   @UnionTimestampConverter.alwaysServerTimestampConverter
-  UnionTimestamp get alwaysServerTimestamp =>
-      throw _privateConstructorUsedError;
-  DocumentReference<JsonMap> get documentReference =>
-      throw _privateConstructorUsedError;
-  Color get color => throw _privateConstructorUsedError;
+  UnionTimestamp get alwaysServerTimestamp;
+  DocumentReference<JsonMap> get documentReference;
+  Color get color;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EntityCopyWith<Entity> get copyWith => throw _privateConstructorUsedError;
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $EntityCopyWith<Entity> get copyWith =>
+      _$EntityCopyWithImpl<Entity>(this as Entity, _$identity);
+
+  /// Serializes this Entity to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Entity &&
+            (identical(other.dateTime, dateTime) ||
+                other.dateTime == dateTime) &&
+            (identical(other.dateTimeNullable, dateTimeNullable) ||
+                other.dateTimeNullable == dateTimeNullable) &&
+            (identical(other.unionTimestamp, unionTimestamp) ||
+                other.unionTimestamp == unionTimestamp) &&
+            (identical(other.unionTimestampNullable, unionTimestampNullable) ||
+                other.unionTimestampNullable == unionTimestampNullable) &&
+            (identical(other.alwaysServerTimestamp, alwaysServerTimestamp) ||
+                other.alwaysServerTimestamp == alwaysServerTimestamp) &&
+            (identical(other.documentReference, documentReference) ||
+                other.documentReference == documentReference) &&
+            (identical(other.color, color) || other.color == color));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      dateTime,
+      dateTimeNullable,
+      unionTimestamp,
+      unionTimestampNullable,
+      alwaysServerTimestamp,
+      documentReference,
+      color);
+
+  @override
+  String toString() {
+    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
+  }
 }
 
 /// @nodoc
-abstract class $EntityCopyWith<$Res> {
-  factory $EntityCopyWith(Entity value, $Res Function(Entity) then) =
-      _$EntityCopyWithImpl<$Res, Entity>;
+abstract mixin class $EntityCopyWith<$Res> {
+  factory $EntityCopyWith(Entity value, $Res Function(Entity) _then) =
+      _$EntityCopyWithImpl;
   @useResult
   $Res call(
       {DateTime dateTime,
@@ -58,15 +92,14 @@ abstract class $EntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EntityCopyWithImpl<$Res, $Val extends Entity>
-    implements $EntityCopyWith<$Res> {
-  _$EntityCopyWithImpl(this._value, this._then);
+class _$EntityCopyWithImpl<$Res> implements $EntityCopyWith<$Res> {
+  _$EntityCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Entity _self;
+  final $Res Function(Entity) _then;
 
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,150 +111,284 @@ class _$EntityCopyWithImpl<$Res, $Val extends Entity>
     Object? documentReference = null,
     Object? color = null,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       dateTime: null == dateTime
-          ? _value.dateTime
+          ? _self.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       dateTimeNullable: freezed == dateTimeNullable
-          ? _value.dateTimeNullable
+          ? _self.dateTimeNullable
           : dateTimeNullable // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       unionTimestamp: null == unionTimestamp
-          ? _value.unionTimestamp
+          ? _self.unionTimestamp
           : unionTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
       unionTimestampNullable: freezed == unionTimestampNullable
-          ? _value.unionTimestampNullable
+          ? _self.unionTimestampNullable
           : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp?,
       alwaysServerTimestamp: null == alwaysServerTimestamp
-          ? _value.alwaysServerTimestamp
+          ? _self.alwaysServerTimestamp
           : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
               as UnionTimestamp,
       documentReference: null == documentReference
-          ? _value.documentReference
+          ? _self.documentReference
           : documentReference // ignore: cast_nullable_to_non_nullable
               as DocumentReference<JsonMap>,
       color: null == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as Color,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UnionTimestampCopyWith<$Res> get unionTimestamp {
-    return $UnionTimestampCopyWith<$Res>(_value.unionTimestamp, (value) {
-      return _then(_value.copyWith(unionTimestamp: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UnionTimestampCopyWith<$Res>? get unionTimestampNullable {
-    if (_value.unionTimestampNullable == null) {
-      return null;
-    }
-
-    return $UnionTimestampCopyWith<$Res>(_value.unionTimestampNullable!,
-        (value) {
-      return _then(_value.copyWith(unionTimestampNullable: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp {
-    return $UnionTimestampCopyWith<$Res>(_value.alwaysServerTimestamp, (value) {
-      return _then(_value.copyWith(alwaysServerTimestamp: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$EntityImplCopyWith<$Res> implements $EntityCopyWith<$Res> {
-  factory _$$EntityImplCopyWith(
-          _$EntityImpl value, $Res Function(_$EntityImpl) then) =
-      __$$EntityImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {DateTime dateTime,
-      DateTime? dateTimeNullable,
-      UnionTimestamp unionTimestamp,
-      UnionTimestamp? unionTimestampNullable,
-      @UnionTimestampConverter.alwaysServerTimestampConverter
-      UnionTimestamp alwaysServerTimestamp,
-      DocumentReference<JsonMap> documentReference,
-      Color color});
-
-  @override
-  $UnionTimestampCopyWith<$Res> get unionTimestamp;
-  @override
-  $UnionTimestampCopyWith<$Res>? get unionTimestampNullable;
-  @override
-  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp;
-}
-
-/// @nodoc
-class __$$EntityImplCopyWithImpl<$Res>
-    extends _$EntityCopyWithImpl<$Res, _$EntityImpl>
-    implements _$$EntityImplCopyWith<$Res> {
-  __$$EntityImplCopyWithImpl(
-      _$EntityImpl _value, $Res Function(_$EntityImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? dateTime = null,
-    Object? dateTimeNullable = freezed,
-    Object? unionTimestamp = null,
-    Object? unionTimestampNullable = freezed,
-    Object? alwaysServerTimestamp = null,
-    Object? documentReference = null,
-    Object? color = null,
-  }) {
-    return _then(_$EntityImpl(
-      dateTime: null == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      dateTimeNullable: freezed == dateTimeNullable
-          ? _value.dateTimeNullable
-          : dateTimeNullable // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      unionTimestamp: null == unionTimestamp
-          ? _value.unionTimestamp
-          : unionTimestamp // ignore: cast_nullable_to_non_nullable
-              as UnionTimestamp,
-      unionTimestampNullable: freezed == unionTimestampNullable
-          ? _value.unionTimestampNullable
-          : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
-              as UnionTimestamp?,
-      alwaysServerTimestamp: null == alwaysServerTimestamp
-          ? _value.alwaysServerTimestamp
-          : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
-              as UnionTimestamp,
-      documentReference: null == documentReference
-          ? _value.documentReference
-          : documentReference // ignore: cast_nullable_to_non_nullable
-              as DocumentReference<JsonMap>,
-      color: null == color
-          ? _value.color
+          ? _self.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color,
     ));
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res> get unionTimestamp {
+    return $UnionTimestampCopyWith<$Res>(_self.unionTimestamp, (value) {
+      return _then(_self.copyWith(unionTimestamp: value));
+    });
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res>? get unionTimestampNullable {
+    if (_self.unionTimestampNullable == null) {
+      return null;
+    }
+
+    return $UnionTimestampCopyWith<$Res>(_self.unionTimestampNullable!,
+        (value) {
+      return _then(_self.copyWith(unionTimestampNullable: value));
+    });
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp {
+    return $UnionTimestampCopyWith<$Res>(_self.alwaysServerTimestamp, (value) {
+      return _then(_self.copyWith(alwaysServerTimestamp: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [Entity].
+extension EntityPatterns on Entity {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Entity value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Entity() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Entity value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Entity():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Entity value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Entity() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            DateTime dateTime,
+            DateTime? dateTimeNullable,
+            UnionTimestamp unionTimestamp,
+            UnionTimestamp? unionTimestampNullable,
+            @UnionTimestampConverter.alwaysServerTimestampConverter
+            UnionTimestamp alwaysServerTimestamp,
+            DocumentReference<JsonMap> documentReference,
+            Color color)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Entity() when $default != null:
+        return $default(
+            _that.dateTime,
+            _that.dateTimeNullable,
+            _that.unionTimestamp,
+            _that.unionTimestampNullable,
+            _that.alwaysServerTimestamp,
+            _that.documentReference,
+            _that.color);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            DateTime dateTime,
+            DateTime? dateTimeNullable,
+            UnionTimestamp unionTimestamp,
+            UnionTimestamp? unionTimestampNullable,
+            @UnionTimestampConverter.alwaysServerTimestampConverter
+            UnionTimestamp alwaysServerTimestamp,
+            DocumentReference<JsonMap> documentReference,
+            Color color)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Entity():
+        return $default(
+            _that.dateTime,
+            _that.dateTimeNullable,
+            _that.unionTimestamp,
+            _that.unionTimestampNullable,
+            _that.alwaysServerTimestamp,
+            _that.documentReference,
+            _that.color);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            DateTime dateTime,
+            DateTime? dateTimeNullable,
+            UnionTimestamp unionTimestamp,
+            UnionTimestamp? unionTimestampNullable,
+            @UnionTimestampConverter.alwaysServerTimestampConverter
+            UnionTimestamp alwaysServerTimestamp,
+            DocumentReference<JsonMap> documentReference,
+            Color color)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Entity() when $default != null:
+        return $default(
+            _that.dateTime,
+            _that.dateTimeNullable,
+            _that.unionTimestamp,
+            _that.unionTimestampNullable,
+            _that.alwaysServerTimestamp,
+            _that.documentReference,
+            _that.color);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 
 @allJsonConvertersSerializable
-class _$EntityImpl extends _Entity {
-  const _$EntityImpl(
+class _Entity extends Entity {
+  const _Entity(
       {required this.dateTime,
       this.dateTimeNullable,
       this.unionTimestamp = const UnionTimestamp.serverTimestamp(),
@@ -231,9 +398,7 @@ class _$EntityImpl extends _Entity {
       required this.documentReference,
       required this.color})
       : super._();
-
-  factory _$EntityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EntityImplFromJson(json);
+  factory _Entity.fromJson(Map<String, dynamic> json) => _$EntityFromJson(json);
 
   @override
   final DateTime dateTime;
@@ -252,16 +417,26 @@ class _$EntityImpl extends _Entity {
   @override
   final Color color;
 
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$EntityCopyWith<_Entity> get copyWith =>
+      __$EntityCopyWithImpl<_Entity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$EntityToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EntityImpl &&
+            other is _Entity &&
             (identical(other.dateTime, dateTime) ||
                 other.dateTime == dateTime) &&
             (identical(other.dateTimeNullable, dateTimeNullable) ||
@@ -277,7 +452,7 @@ class _$EntityImpl extends _Entity {
             (identical(other.color, color) || other.color == color));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -289,51 +464,122 @@ class _$EntityImpl extends _Entity {
       documentReference,
       color);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
-      __$$EntityImplCopyWithImpl<_$EntityImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EntityImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
   }
 }
 
-abstract class _Entity extends Entity {
-  const factory _Entity(
-      {required final DateTime dateTime,
-      final DateTime? dateTimeNullable,
-      final UnionTimestamp unionTimestamp,
-      final UnionTimestamp? unionTimestampNullable,
+/// @nodoc
+abstract mixin class _$EntityCopyWith<$Res> implements $EntityCopyWith<$Res> {
+  factory _$EntityCopyWith(_Entity value, $Res Function(_Entity) _then) =
+      __$EntityCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {DateTime dateTime,
+      DateTime? dateTimeNullable,
+      UnionTimestamp unionTimestamp,
+      UnionTimestamp? unionTimestampNullable,
       @UnionTimestampConverter.alwaysServerTimestampConverter
-      required final UnionTimestamp alwaysServerTimestamp,
-      required final DocumentReference<JsonMap> documentReference,
-      required final Color color}) = _$EntityImpl;
-  const _Entity._() : super._();
-
-  factory _Entity.fromJson(Map<String, dynamic> json) = _$EntityImpl.fromJson;
+      UnionTimestamp alwaysServerTimestamp,
+      DocumentReference<JsonMap> documentReference,
+      Color color});
 
   @override
-  DateTime get dateTime;
+  $UnionTimestampCopyWith<$Res> get unionTimestamp;
   @override
-  DateTime? get dateTimeNullable;
+  $UnionTimestampCopyWith<$Res>? get unionTimestampNullable;
   @override
-  UnionTimestamp get unionTimestamp;
-  @override
-  UnionTimestamp? get unionTimestampNullable;
-  @override
-  @UnionTimestampConverter.alwaysServerTimestampConverter
-  UnionTimestamp get alwaysServerTimestamp;
-  @override
-  DocumentReference<JsonMap> get documentReference;
-  @override
-  Color get color;
-  @override
-  @JsonKey(ignore: true)
-  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp;
 }
+
+/// @nodoc
+class __$EntityCopyWithImpl<$Res> implements _$EntityCopyWith<$Res> {
+  __$EntityCopyWithImpl(this._self, this._then);
+
+  final _Entity _self;
+  final $Res Function(_Entity) _then;
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? dateTime = null,
+    Object? dateTimeNullable = freezed,
+    Object? unionTimestamp = null,
+    Object? unionTimestampNullable = freezed,
+    Object? alwaysServerTimestamp = null,
+    Object? documentReference = null,
+    Object? color = null,
+  }) {
+    return _then(_Entity(
+      dateTime: null == dateTime
+          ? _self.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      dateTimeNullable: freezed == dateTimeNullable
+          ? _self.dateTimeNullable
+          : dateTimeNullable // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      unionTimestamp: null == unionTimestamp
+          ? _self.unionTimestamp
+          : unionTimestamp // ignore: cast_nullable_to_non_nullable
+              as UnionTimestamp,
+      unionTimestampNullable: freezed == unionTimestampNullable
+          ? _self.unionTimestampNullable
+          : unionTimestampNullable // ignore: cast_nullable_to_non_nullable
+              as UnionTimestamp?,
+      alwaysServerTimestamp: null == alwaysServerTimestamp
+          ? _self.alwaysServerTimestamp
+          : alwaysServerTimestamp // ignore: cast_nullable_to_non_nullable
+              as UnionTimestamp,
+      documentReference: null == documentReference
+          ? _self.documentReference
+          : documentReference // ignore: cast_nullable_to_non_nullable
+              as DocumentReference<JsonMap>,
+      color: null == color
+          ? _self.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res> get unionTimestamp {
+    return $UnionTimestampCopyWith<$Res>(_self.unionTimestamp, (value) {
+      return _then(_self.copyWith(unionTimestamp: value));
+    });
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res>? get unionTimestampNullable {
+    if (_self.unionTimestampNullable == null) {
+      return null;
+    }
+
+    return $UnionTimestampCopyWith<$Res>(_self.unionTimestampNullable!,
+        (value) {
+      return _then(_self.copyWith(unionTimestampNullable: value));
+    });
+  }
+
+  /// Create a copy of Entity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UnionTimestampCopyWith<$Res> get alwaysServerTimestamp {
+    return $UnionTimestampCopyWith<$Res>(_self.alwaysServerTimestamp, (value) {
+      return _then(_self.copyWith(alwaysServerTimestamp: value));
+    });
+  }
+}
+
+// dart format on

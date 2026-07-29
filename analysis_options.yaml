@@ -3,5 +3,11 @@ include: package:pedantic_mono/analysis_options.yaml
 analyzer:
   exclude:
     - lib/generated_plugin_registrant.dart
+    - '**/*.freezed.dart'
+    - '**/*.g.dart'
   errors:
     invalid_annotation_target: ignore
+linter:
+  rules:
+    public_member_api_docs: true
+
