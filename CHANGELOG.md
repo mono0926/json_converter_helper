@@ -1,3 +1,13 @@
+## 0.1.8 - 2026-10-20
+
+### Features
+- Add AI Agent Skill (`json_converter_helper-converters`)
+- Make `UnionTimestamp` a `sealed` class for exhaustive Dart 3 pattern matching
+
+### Bug Fixes
+- Replace deprecated `Color.value` with `Color.toARGB32()` in `ColorConverter`
+- Widen dependency constraints to support latest `cloud_firestore`, `freezed_annotation`, and `json_annotation`
+
 ## 0.1.7 - 2026-07-29
 
 ### Documentation
