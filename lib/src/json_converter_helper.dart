@@ -80,6 +80,5 @@ class ColorConverter implements JsonConverter<Color, int> {
 
   /// Converts a Flutter [Color] to a 32-bit ARGB integer.
   @override
-  // ignore: deprecated_member_use
-  int toJson(Color object) => object.value;
+  int toJson(Color object) => object.toARGB32();
 }

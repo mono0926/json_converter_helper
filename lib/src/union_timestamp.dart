@@ -36,10 +36,10 @@ class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
   @override
   Object toJson(UnionTimestamp object) => alwaysServerTimestampJson
       ? FieldValue.serverTimestamp()
-      : object.map(
-          dateTime: (date) => Timestamp.fromDate(date.date),
-          serverTimestamp: (_) => FieldValue.serverTimestamp(),
-        );
+      : switch (object) {
+          UnionDateTime(:final date) => Timestamp.fromDate(date),
+          UnionServerTimestamp() => FieldValue.serverTimestamp(),
+        };
 }
 
 /// A union representation of a timestamp in Firestore.
@@ -47,7 +47,7 @@ class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
 /// Represents either a specific [DateTime] or a sentinel value requesting
 /// the server timestamp.
 @freezed
-class UnionTimestamp with _$UnionTimestamp {
+sealed class UnionTimestamp with _$UnionTimestamp {
   /// Creates a [UnionTimestamp] holding a specific [DateTime].
   const factory UnionTimestamp.dateTime(DateTime date) = UnionDateTime;
 
@@ -60,7 +60,10 @@ class UnionTimestamp with _$UnionTimestamp {
   /// Gets the underlying [DateTime] if this is a [UnionDateTime], or `null`
   /// otherwise.
   // const constructorにしたいので`late final`にできないのを許容
-  DateTime? get date => mapOrNull(dateTime: (date) => date.date);
+  DateTime? get date => switch (this) {
+    UnionDateTime(:final date) => date,
+    UnionServerTimestamp() => null,
+  };
 
   /// Gets the underlying [DateTime], or [DateTime.now] if this represents a
   /// server timestamp.
