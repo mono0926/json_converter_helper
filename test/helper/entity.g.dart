@@ -26,7 +26,7 @@ _Entity _$EntityFromJson(Map json) => _Entity(
   alwaysServerTimestamp: UnionTimestampConverter.alwaysServerTimestampConverter
       .fromJson(json['alwaysServerTimestamp'] as Object),
   documentReference: const DocumentReferenceConverter().fromJson(
-    json['documentReference'] as DocumentReference<Map<String, dynamic>>,
+    json['documentReference'] as DocumentReference<JsonMap>,
   ),
   color: const ColorConverter().fromJson((json['color'] as num).toInt()),
 );

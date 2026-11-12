@@ -4,7 +4,7 @@ version: 0.1.8
 repository: https://github.com/mono0926/json_converter_helper
 
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.14.0
 
 dependencies:
   cloud_firestore: '>=6.0.0 <8.0.0'
@@ -18,5 +18,5 @@ dev_dependencies:
     sdk: flutter
   freezed:
   json_serializable:
-  pedantic_mono:
+  pedantic_mono: ^1.39.0
   test:

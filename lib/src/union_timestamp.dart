@@ -8,16 +8,16 @@ const unionTimestampConverter = UnionTimestampConverter();
 
 /// A [JsonConverter] converting [UnionTimestamp] to and from Firestore
 /// [Timestamp] or [FieldValue.serverTimestamp].
-class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
+class const UnionTimestampConverter({
+  /// Whether to always output [FieldValue.serverTimestamp()] when converting
+  /// to JSON.
+  final bool alwaysServerTimestampJson = false,
+}) implements JsonConverter<UnionTimestamp, Object> {
   /// Creates a [UnionTimestampConverter].
   ///
   /// If [alwaysServerTimestampJson] is set to `true`, [toJson] will always
   /// return [FieldValue.serverTimestamp()].
-  const UnionTimestampConverter({this.alwaysServerTimestampJson = false});
-
-  /// Whether to always output [FieldValue.serverTimestamp()] when converting
-  /// to JSON.
-  final bool alwaysServerTimestampJson;
+  this;
 
   /// A pre-configured [UnionTimestampConverter] that always converts to
   /// [FieldValue.serverTimestamp()].
@@ -47,15 +47,13 @@ class UnionTimestampConverter implements JsonConverter<UnionTimestamp, Object> {
 /// Represents either a specific [DateTime] or a sentinel value requesting
 /// the server timestamp.
 @freezed
-sealed class UnionTimestamp with _$UnionTimestamp {
+sealed class const UnionTimestamp._() with _$UnionTimestamp {
   /// Creates a [UnionTimestamp] holding a specific [DateTime].
-  const factory UnionTimestamp.dateTime(DateTime date) = UnionDateTime;
+  const factory dateTime(DateTime date) = UnionDateTime;
 
   /// Creates a [UnionTimestamp] representing a server-side timestamp sentinel
   /// value.
-  const factory UnionTimestamp.serverTimestamp() = UnionServerTimestamp;
-
-  const UnionTimestamp._();
+  const factory serverTimestamp() = UnionServerTimestamp;
 
   /// Gets the underlying [DateTime] if this is a [UnionDateTime], or `null`
   /// otherwise.
