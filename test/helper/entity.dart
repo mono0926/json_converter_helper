@@ -8,9 +8,9 @@ part 'entity.freezed.dart';
 part 'entity.g.dart';
 
 @freezed
-abstract class Entity with _$Entity {
+abstract class const Entity._() with _$Entity {
   @allJsonConvertersSerializable
-  const factory Entity({
+  const factory({
     required DateTime dateTime,
     DateTime? dateTimeNullable,
     @Default(UnionTimestamp.serverTimestamp()) UnionTimestamp unionTimestamp,
@@ -20,6 +20,5 @@ abstract class Entity with _$Entity {
     required DocumentReference<JsonMap> documentReference,
     required Color color,
   }) = _Entity;
-  factory Entity.fromJson(JsonMap json) => _$EntityFromJson(json);
-  const Entity._();
+  factory fromJson(JsonMap json) => _$EntityFromJson(json);
 }

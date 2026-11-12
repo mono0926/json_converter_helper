@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'entity.dart';
@@ -9,6 +9,7 @@ part of 'entity.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $EntityCopyWith<Entity> get copyWith => _$EntityCopyWithImpl<Entity>(this as Ent
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Entity&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime)&&(identical(other.dateTimeNullable, dateTimeNullable) || other.dateTimeNullable == dateTimeNullable)&&(identical(other.unionTimestamp, unionTimestamp) || other.unionTimestamp == unionTimestamp)&&(identical(other.unionTimestampNullable, unionTimestampNullable) || other.unionTimestampNullable == unionTimestampNullable)&&(identical(other.alwaysServerTimestamp, alwaysServerTimestamp) || other.alwaysServerTimestamp == alwaysServerTimestamp)&&(identical(other.documentReference, documentReference) || other.documentReference == documentReference)&&(identical(other.color, color) || other.color == color));
+  final _this = this as Entity;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Entity&&(identical(other.dateTime, _this.dateTime) || other.dateTime == _this.dateTime)&&(identical(other.dateTimeNullable, _this.dateTimeNullable) || other.dateTimeNullable == _this.dateTimeNullable)&&(identical(other.unionTimestamp, _this.unionTimestamp) || other.unionTimestamp == _this.unionTimestamp)&&(identical(other.unionTimestampNullable, _this.unionTimestampNullable) || other.unionTimestampNullable == _this.unionTimestampNullable)&&(identical(other.alwaysServerTimestamp, _this.alwaysServerTimestamp) || other.alwaysServerTimestamp == _this.alwaysServerTimestamp)&&(identical(other.documentReference, _this.documentReference) || other.documentReference == _this.documentReference)&&(identical(other.color, _this.color) || other.color == _this.color));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,dateTime,dateTimeNullable,unionTimestamp,unionTimestampNullable,alwaysServerTimestamp,documentReference,color);
+int get hashCode {
+  final _this = this as Entity;
+  return Object.hash(runtimeType,_this.dateTime,_this.dateTimeNullable,_this.unionTimestamp,_this.unionTimestampNullable,_this.alwaysServerTimestamp,_this.documentReference,_this.color);
+}
 
 @override
 String toString() {
-  return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
+  final _this = this as Entity;
+  return 'Entity(dateTime: ${_this.dateTime}, dateTimeNullable: ${_this.dateTimeNullable}, unionTimestamp: ${_this.unionTimestamp}, unionTimestampNullable: ${_this.unionTimestampNullable}, alwaysServerTimestamp: ${_this.alwaysServerTimestamp}, documentReference: ${_this.documentReference}, color: ${_this.color})';
 }
 
 
@@ -66,7 +72,7 @@ class _$EntityCopyWithImpl<$Res>
 /// Create a copy of Entity
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? dateTime = null,Object? dateTimeNullable = freezed,Object? unionTimestamp = null,Object? unionTimestampNullable = freezed,Object? alwaysServerTimestamp = null,Object? documentReference = null,Object? color = null,}) {
-  return _then(_self.copyWith(
+  return _then(Entity(
 dateTime: null == dateTime ? _self.dateTime : dateTime // ignore: cast_nullable_to_non_nullable
 as DateTime,dateTimeNullable: freezed == dateTimeNullable ? _self.dateTimeNullable : dateTimeNullable // ignore: cast_nullable_to_non_nullable
 as DateTime?,unionTimestamp: null == unionTimestamp ? _self.unionTimestamp : unionTimestamp // ignore: cast_nullable_to_non_nullable
@@ -269,16 +275,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Entity&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime)&&(identical(other.dateTimeNullable, dateTimeNullable) || other.dateTimeNullable == dateTimeNullable)&&(identical(other.unionTimestamp, unionTimestamp) || other.unionTimestamp == unionTimestamp)&&(identical(other.unionTimestampNullable, unionTimestampNullable) || other.unionTimestampNullable == unionTimestampNullable)&&(identical(other.alwaysServerTimestamp, alwaysServerTimestamp) || other.alwaysServerTimestamp == alwaysServerTimestamp)&&(identical(other.documentReference, documentReference) || other.documentReference == documentReference)&&(identical(other.color, color) || other.color == color));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Entity&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime)&&(identical(other.dateTimeNullable, dateTimeNullable) || other.dateTimeNullable == dateTimeNullable)&&(identical(other.unionTimestamp, unionTimestamp) || other.unionTimestamp == unionTimestamp)&&(identical(other.unionTimestampNullable, unionTimestampNullable) || other.unionTimestampNullable == unionTimestampNullable)&&(identical(other.alwaysServerTimestamp, alwaysServerTimestamp) || other.alwaysServerTimestamp == alwaysServerTimestamp)&&(identical(other.documentReference, documentReference) || other.documentReference == documentReference)&&(identical(other.color, color) || other.color == color));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,dateTime,dateTimeNullable,unionTimestamp,unionTimestampNullable,alwaysServerTimestamp,documentReference,color);
+int get hashCode {
+    return Object.hash(runtimeType,dateTime,dateTimeNullable,unionTimestamp,unionTimestampNullable,alwaysServerTimestamp,documentReference,color);
+}
 
 @override
 String toString() {
-  return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
+    return 'Entity(dateTime: $dateTime, dateTimeNullable: $dateTimeNullable, unionTimestamp: $unionTimestamp, unionTimestampNullable: $unionTimestampNullable, alwaysServerTimestamp: $alwaysServerTimestamp, documentReference: $documentReference, color: $color)';
 }
 
 

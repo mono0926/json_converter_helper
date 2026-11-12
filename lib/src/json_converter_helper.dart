@@ -24,9 +24,9 @@ const allJsonConvertersSerializable = JsonSerializable(
 );
 
 /// A generic passthrough [JsonConverter] that returns the input object as-is.
-class PassthroughConverter<T> implements JsonConverter<T, T> {
+class const PassthroughConverter<T>() implements JsonConverter<T, T> {
   /// Creates a [PassthroughConverter].
-  const PassthroughConverter();
+  this;
 
   /// Returns the JSON object as-is.
   @override
@@ -41,10 +41,10 @@ class PassthroughConverter<T> implements JsonConverter<T, T> {
 const documentReferenceConverter = DocumentReferenceConverter();
 
 /// A [JsonConverter] for Firestore [DocumentReference] objects.
-class DocumentReferenceConverter
+class const DocumentReferenceConverter()
     extends PassthroughConverter<DocumentReference<JsonMap>> {
   /// Creates a [DocumentReferenceConverter].
-  const DocumentReferenceConverter();
+  this;
 }
 
 /// A default instance of [TimestampConverter].
@@ -52,9 +52,9 @@ const timestampConverter = TimestampConverter();
 
 /// A [JsonConverter] converting Firestore [Timestamp] to and from Dart
 /// [DateTime].
-class TimestampConverter implements JsonConverter<DateTime, Timestamp> {
+class const TimestampConverter() implements JsonConverter<DateTime, Timestamp> {
   /// Creates a [TimestampConverter].
-  const TimestampConverter();
+  this;
 
   /// Converts a Firestore [Timestamp] to a Dart [DateTime].
   @override
@@ -70,9 +70,9 @@ const colorConverter = ColorConverter();
 
 /// A [JsonConverter] converting Flutter [Color] to and from 32-bit ARGB
 /// [int].
-class ColorConverter implements JsonConverter<Color, int> {
+class const ColorConverter() implements JsonConverter<Color, int> {
   /// Creates a [ColorConverter].
-  const ColorConverter();
+  this;
 
   /// Converts a 32-bit ARGB integer to a Flutter [Color].
   @override
