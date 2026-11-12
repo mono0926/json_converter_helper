@@ -1,3 +1,12 @@
+## 0.2.0 - 2026-11-12
+
+### Breaking Changes
+- Bump minimum Dart SDK constraint to `^3.14.0` (Flutter 3.50).
+
+### Features
+- Adopt Dart 3.14 primary constructors and concise factory constructor syntax.
+- Regenerate Freezed and `json_serializable` generated files.
+
 ## 0.1.8 - 2026-10-20
 
 ### Features
